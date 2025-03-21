@@ -1,6 +1,6 @@
 node{
     stage('git checkout'){
-        git 'https://github.com/VivianFernandes777/Staragileinsurance'
+        git 'https://github.com/Testuser-0-root/Staragileinsurance'
     }
    
     stage('build and package'){
@@ -12,7 +12,7 @@ node{
     }
     
     stage('Docker build and images'){
-        sh 'docker build -t vivianfernandes777/staragileinsurance:v1 .'
+        sh 'docker build -t testuser0root/test .'
         sh 'docker images'
     }
     
@@ -23,7 +23,7 @@ node{
      }
    
     stage('Docker push ') {
-     sh 'docker push vivianfernandes777/staragileinsurance:v1 '
+     sh 'docker push testuser0root/test '
      }
             
     stage('Deploy on ansible') {
