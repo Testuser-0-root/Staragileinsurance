@@ -17,4 +17,5 @@
     become_user : root
 
   - name: Deploy Docker Container
-    command: docker run -itd -p 8099:8081 vivianfernandes777/staragileinsurance:v1
+    command: docker run -itd -p 8099:8081 testuser0root/test
+
