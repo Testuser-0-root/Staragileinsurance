@@ -26,7 +26,4 @@ node{
      sh 'docker push testuser0root/test '
      }
             
-    stage('Deploy on ansible') {
-    ansiblePlaybook become: true, credentialsId: 'anisble', disableHostKeyChecking: true, installation: 'Ansible', inventory: '/etc/ansible/hosts', playbook: 'ansible-playbook.yml', vaultTmpPath: ''
-    }
 }
