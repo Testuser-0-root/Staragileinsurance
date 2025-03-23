@@ -31,7 +31,7 @@ node{
      }
      stage('port expose'){
             steps{
-                sh 'docker run -dt -p 8091:8091 testuser0root/test'
+                sh 'docker run -dt -p 8091:8091 --name c000 testuser0root/test'
             }
         }   
 }
