@@ -27,5 +27,11 @@ node{
      }    
      stage('Deploy on ansible') {
     ansiblePlaybook become: true, credentialsId: 'anisble', disableHostKeyChecking: true, installation: 'Ansible', inventory: '/etc/ansible/hosts', playbook: 'ansible-playbook.yml', vaultTmpPath: ''
-    }
+    
+     }
+     stage('port expose'){
+            steps{
+                sh 'docker run -dt -p 8091:8091 --name c000 myimg'
+            }
+        }   
 }
